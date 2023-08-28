@@ -23,7 +23,9 @@ In this project we classify customers as potential defaulters given personal and
 - **History of past payment**: The measurement scale for the repayment status is: -1 = pay duly; 1 = payment delay for one month; 2 = payment delay for two months; . . .; 8 = payment delay for eight months; 9 = payment delay for nine months and above
 - **Amount of bill statement**: (dollars) for past 6 months
 - **Amount of previous payment** past 6 months
-![](https://github.com/sudhanshu2198/Computer-Vision-using-Pytorch/blob/main/images/2.png)
+  
+## Feature Importance
+![](https://github.com/sudhanshu2198/Credit-Card-Default-Prediction/blob/main/images/f_imp.png)
 
 
 **The main goal of this project is to develop a Credit Card Defaulter Prediction model and deploying the model using streamkit as an Web App.**
@@ -37,12 +39,22 @@ In this project we classify customers as potential defaulters given personal and
 ## 🛠 Frameworks
 Numpy, Pandas, Matplotlib, Seaborn, Scikit-learn, Imblearn, Xgboost, Lightgbm 
 
-## Visualization
-
-
 ## Results
+- LightGBM performs best among other models.
+- KNNClassifier performs poorly and is highly underconfident for predicting positive class.
+- LightGBM,XGB,Random Forest, Logistic Regression classifiers have learned the underlying structure but are underconfident with high probabilities, therefore there performance can be increased by using probabaility calibration.
 
-**The model is trained for 15 epochs using GPU Tesla P-100. It achieved weighted f1_score of 70% on validation dataset.**
+![](https://github.com/sudhanshu2198/Credit-Card-Default-Prediction/blob/main/images/algo_spot.png)
+![](https://github.com/sudhanshu2198/Credit-Card-Default-Prediction/blob/main/images/roc%20curve.png)
+
+- Though the ensemble model has lower performance then lgbm and xgb on train dataset, but have same performance on test datasets, therefore generalizing better.
+
+![](https://github.com/sudhanshu2198/Credit-Card-Default-Prediction/blob/main/images/ensembled.png)
+
+- Threshold moving yields the best threshold as .201.
+
+![](https://github.com/sudhanshu2198/Credit-Card-Default-Prediction/blob/main/images/thresh.png)
+![](https://github.com/sudhanshu2198/Credit-Card-Default-Prediction/blob/main/images/matrix.png)
 
 
 
