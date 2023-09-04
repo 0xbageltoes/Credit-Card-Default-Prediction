@@ -10,7 +10,7 @@ st.write("With the growing number of credit card users, banks have been facing a
           This increase in defaults causes losses to the financial institutions along with the card holders. As such data\
           analytics can provide solutions to tackle the current phenomenon and management of credit defaults. This project\
           discusses the implementation of an model which predicts if a given credit card holder has a probability of \
-         defaulting in the following month, using their demographic data and behavioral data from the past 6 months.")
+         defaulting in the following month, using their demographic data and behavioral data from the past 3 months.")
 
 col1,col2=st.columns(2)
 with col1:
