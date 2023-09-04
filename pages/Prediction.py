@@ -59,9 +59,8 @@ if click:
     data=np.array([[limit,(Sex.index(sex)+1),(Education.index(education)+1),(Marital.index(marital)+1),age,
                    delay1,delay2,delay3,bill1,bill2,bill3,payam1,payam2,payam2]])
     
-    proba=model.predict_proba(data)[0]
-    st.write(proba)
-    if proba[1]<=0.21:
+    proba=model.predict_proba(data)[0][1]
+    if proba<=0.201:
         st.error(f"Customer will default on payments with probability")
     else:
         st.success(f"Customer will not default on payments with probability")
